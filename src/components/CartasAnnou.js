@@ -22,7 +22,8 @@ const CartasAnnou = () => {
     <Card key={i} className='HOME__ListCardItem'>
       <Image
         className='HOME__ListCardItem_Image'
-        src='https://react.semantic-ui.com/images/avatar/large/matthew.png'
+        src={ima}
+        //src='https://react.semantic-ui.com/images/avatar/large/matthew.png'
       />
       <Card.Content>
         <Card.Description>{desc}.</Card.Description>

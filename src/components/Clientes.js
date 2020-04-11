@@ -7,14 +7,17 @@ import "../pages/styles/Home.css";
 const show1 = {
   ima: faker.image.image(),
   desc: faker.name.jobArea(),
+  name: faker.internet.userName(),
 };
 const show2 = {
   ima: faker.image.image(),
   desc: faker.name.jobArea(),
+  name: faker.internet.userName(),
 };
 const show3 = {
   ima: faker.image.image(),
   desc: faker.name.jobArea(),
+  name: faker.internet.userName(),
 };
 
 const lista = [show1, show2, show3];
@@ -22,18 +25,24 @@ const lista = [show1, show2, show3];
 console.log("lista :", lista);
 
 const Clientes = () => {
-  const LIST_CARD = lista.map(({ ima, desc }, i) => (
-    <Card key={i} className='HOME__ListCardItem'>
+  const LIST_CARD = lista.map(({ ima, desc, name }, i) => (
+    <List.Item key={i} className='HOME__Clientes_ListCardItem'>
       <Image
-        className='HOME__ListCardItem_Image'
+        circular
+        className='HOME__Clientes_ListCardItem_Image'
         src='https://react.semantic-ui.com/images/avatar/large/matthew.png'
       />
-      <Card.Content>
-        <Card.Description>{desc}.</Card.Description>
-      </Card.Content>
-    </Card>
+      <List.Content>
+        <List.Header>{name}</List.Header>
+        {desc}
+      </List.Content>
+    </List.Item>
   ));
-  return <div className='HOME__ListCardAnnou'>{LIST_CARD}</div>;
+  return (
+    <List Horizontal className='HOME__Clientes_ListCardAnnou'>
+      {LIST_CARD}
+    </List>
+  );
 };
 
 export default Clientes;

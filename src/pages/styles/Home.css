@@ -130,6 +130,22 @@
 
 }
 
+.HOME__Clientes_ListCardItem{
+  margin: 20px !important;
+  display: flex !important;
+}
+.HOME__Clientes_ListCardItem_Image{
+  object-fit: cover;
+  object-position: center center;
+  max-height: 140px;
+  width: 100%;
+}
+.HOME__Clientes_ListCardAnnou{
+  display: flex;
+  justify-content: space-between;
+  height: 280px;
+}
+
 
 @media screen and (max-width: 768px) {
   .Home_row_uno{
@@ -164,6 +180,22 @@
   width: 100% !important;
   margin: 10px !important;
   padding: 10px !important;
+}
+
+.HOME__Clientes_ListCardItem{
+  margin: 20px !important;
+  display: flex !important;
+  width: 100%;
+}
+.Home__Clientes_Container {
+  width: 100%;
+  height: auto;
+}
+.HOME__Clientes_ListCardAnnou {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
 }
 
 

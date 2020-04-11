@@ -29,7 +29,12 @@ const CartasAnnou = () => {
       </Card.Content>
     </Card>
   ));
-  return <div className='HOME__ListCardAnnou'>{LIST_CARD}</div>;
+  return (
+    <>
+      <h4 style={{ padding: "10px 0px 0px 20px" }}>Anuncios</h4>
+      <div className='HOME__ListCardAnnou'>{LIST_CARD}</div>
+    </>
+  );
 };
 
 export default CartasAnnou;

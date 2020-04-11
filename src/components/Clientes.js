@@ -1,6 +1,6 @@
 import React from "react";
 import faker from "faker";
-import { Card, Image, List } from "semantic-ui-react";
+import { Card, Image, List, Tab } from "semantic-ui-react";
 
 import "../pages/styles/Home.css";
 
@@ -38,10 +38,24 @@ const Clientes = () => {
       </div>
     </List.Item>
   ));
+  const panes = [
+    {
+      menuItem: "Tab 1",
+      render: () => (
+        <List Horizontal className='HOME__Clientes_ListCardAnnou'>
+          {LIST_CARD}
+        </List>
+      ),
+    },
+    {
+      menuItem: "Tab 2",
+      render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane>,
+    },
+  ];
   return (
-    <List Horizontal className='HOME__Clientes_ListCardAnnou'>
-      {LIST_CARD}
-    </List>
+    <>
+      <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
+    </>
   );
 };
 

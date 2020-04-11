@@ -31,6 +31,7 @@
   align-items: center;
   padding: 10px;
 }
+
 .Home_row_dos{
   display: flex;
   flex-direction: row;
@@ -47,11 +48,22 @@
 .HOME__ListCardAnnou{
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  height: 280px;
+  
 }
+
+.HOME__ListCardItem_Image{
+  object-fit: cover;
+  object-position: center center;
+  max-height: 140px;
+  width: 100%;
+}
+
 
 @media screen and (min-width: 768px) {
   .Home__col {
     align-items: flex-start;
   }
+
+
 }

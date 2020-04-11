@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./styles/Home.css";
 import LogoImage from "../images/az-nuevo_circular.png";
 import CartasAnnou from "../components/CartasAnnou";
-import { Card } from "semantic-ui-react";
+import { Card, Image } from "semantic-ui-react";
 
 export default class Home extends Component {
   render() {
@@ -13,7 +13,12 @@ export default class Home extends Component {
         <div className='container'>
           <div className='Home_row_uno'>
             <Card style={{ width: "50%", margin: 10, padding: 10 }}>
-              <CartasAnnou />
+              <div style={{ width: "100%", height: 280 }}>
+                <img
+                  src={LogoImage}
+                  style={{ display: "block", margin: "auto", height: 280 }}
+                />
+              </div>
             </Card>
             <Card style={{ width: "50%", margin: 10, padding: 10 }}>
               <CartasAnnou />
@@ -21,10 +26,10 @@ export default class Home extends Component {
           </div>
 
           <div className='Home_row_dos'>
-            <Card style={{ width: "70%", margin: 10, padding: 10 }}>
+            <Card style={{ width: "75%", margin: 10, padding: 10 }}>
               <CartasAnnou />
             </Card>
-            <Card style={{ width: "30%", margin: 10, padding: 10 }}>
+            <Card style={{ width: "25%", margin: 10, padding: 10 }}>
               <CartasAnnou />
             </Card>
           </div>

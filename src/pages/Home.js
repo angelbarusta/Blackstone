@@ -8,7 +8,13 @@ import CartasAnnou from "../components/CartasAnnou";
 import { Card, Image } from "semantic-ui-react";
 import Clientes from "../components/Clientes";
 import Tareas from "../components/Tareas";
+import faker from "faker";
 
+const autor = {
+  name: faker.internet.userName(),
+  frace: faker.lorem.slug(),
+  date: faker.date.recent().toLocaleDateString(),
+};
 export default class Home extends Component {
   render() {
     return (
@@ -17,7 +23,14 @@ export default class Home extends Component {
           <div className='Home_row_uno'>
             <Card className='Home__Landing'>
               <div className='Home__Landing_Container_Image'>
-                <img src={LandingImage} className='Home__Landing_Image' />
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <h1>Mensaje del dia</h1>
+                  <br />
+                  <p style={{ fontSize: 20 }}>{autor.frace}</p>
+                  <p style={{ fontSize: 10 }}>{autor.name}</p>
+                  <p style={{ fontSize: 10 }}>{autor.date}</p>
+                </div>
+                {/* <img src={LandingImage} className='Home__Landing_Image' /> */}
               </div>
             </Card>
             <Card className='Home__Cart_Selection'>

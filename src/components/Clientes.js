@@ -32,10 +32,10 @@ const Clientes = () => {
         className='HOME__Clientes_ListCardItem_Image'
         src='https://react.semantic-ui.com/images/avatar/large/matthew.png'
       />
-      <List.Content>
+      <div className='HOME__Clientes_ListCardItem_Image_desc'>
         <List.Header>{name}</List.Header>
         {desc}
-      </List.Content>
+      </div>
     </List.Item>
   ));
   return (

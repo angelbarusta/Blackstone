@@ -1,6 +1,6 @@
 import React from "react";
 import faker from "faker";
-import { Card, Image, List, Tab } from "semantic-ui-react";
+import { Card, Image, List, Tab, Label, Menu } from "semantic-ui-react";
 
 import "../pages/styles/Home.css";
 
@@ -39,6 +39,22 @@ const show6 = {
 const lista = [show1, show2, show3];
 const listaNueva = [show4, show5, show6];
 
+const countNewClients = listaNueva.length;
+const countClients = lista.length;
+
+var label1 = (
+  <Label circular color='green' style={{ height: 20 }}>
+    {" "}
+    {countClients}
+  </Label>
+);
+var label2 = (
+  <Label circular color='green' style={{ height: 20 }}>
+    {" "}
+    {countNewClients}
+  </Label>
+);
+
 console.log("lista :", lista);
 
 const Clientes = () => {
@@ -72,7 +88,14 @@ const Clientes = () => {
   ));
   const panes = [
     {
-      menuItem: "NEW CLIENTS",
+      menuItem: (
+        <Menu.Item key='Clientes'>
+          Clientes
+          <Label circular color='green'>
+            {countClients}
+          </Label>
+        </Menu.Item>
+      ),
       render: () => (
         <List Horizontal className='HOME__Clientes_ListCardAnnou'>
           {LIST_CARD}
@@ -80,7 +103,14 @@ const Clientes = () => {
       ),
     },
     {
-      menuItem: "NEW STAFF",
+      menuItem: (
+        <Menu.Item key='Nuevos Clientes'>
+          Nuevos Clientes
+          <Label circular color='green'>
+            {countNewClients}
+          </Label>
+        </Menu.Item>
+      ),
       render: () => (
         <List Horizontal className='HOME__Clientes_ListCardAnnou'>
           {LIST_CARD_NUEVA}

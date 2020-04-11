@@ -12,20 +12,12 @@ export default class Home extends Component {
       <div className='Home'>
         <div className='container'>
           <div className='Home_row_uno'>
-            <Card style={{ width: "50%", margin: 10 }}>
-              <div style={{ width: "100%", height: 280 }}>
-                <img
-                  src={LogoImage}
-                  style={{
-                    display: "block",
-                    margin: "auto",
-                    height: 280,
-                    maxHeight: 280,
-                  }}
-                />
+            <Card className='Home__Landing'>
+              <div className='Home__Landing_Container_Image'>
+                <img src={LogoImage} className='Home__Landing_Image' />
               </div>
             </Card>
-            <Card style={{ width: "50%", margin: 10, maxHeight: 270 }}>
+            <Card className='Home__Cart_Selection'>
               <CartasAnnou />
             </Card>
           </div>

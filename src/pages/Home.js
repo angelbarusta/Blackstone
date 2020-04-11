@@ -6,6 +6,8 @@ import LandingImage from "../images/landing.png";
 import LogoImage from "../images/az-nuevo_circular.png";
 import CartasAnnou from "../components/CartasAnnou";
 import { Card, Image } from "semantic-ui-react";
+import Clientes from "../components/Clientes";
+import Tareas from "../components/Tareas";
 
 export default class Home extends Component {
   render() {
@@ -26,15 +28,12 @@ export default class Home extends Component {
           <div className='Home_row_dos'>
             <Card className='Home__Clientes'>
               <div className='Home__Clientes_Container'>
-                <img
-                  src={LogoImage}
-                  className='Home__Clientes_Container_Image'
-                />
+                <Clientes className='Home__Clientes_Container_Image' />
               </div>
             </Card>
             <Card className='Home__Lista'>
               <div className='Home__Lista_Container'>
-                <img src={LogoImage} className='Home__Lista_Container_Image' />
+                <Tareas className='Home__Lista_Container_Image' />
               </div>
             </Card>
           </div>

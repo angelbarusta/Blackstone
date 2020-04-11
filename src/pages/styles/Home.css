@@ -49,7 +49,6 @@
   display: flex;
   justify-content: space-between;
   height: 280px;
-  
 }
 
 .HOME__ListCardItem_Image{
@@ -109,6 +108,16 @@
   margin: auto;
   height: 280px;
   width: 100%;
+}
+.HOME__Tareas_ListCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 280px;
+}
+.HOME__Tareas_ListCardItem{
+  padding: 20px !important;
+  border: solid 1px gray;
 }
 
 

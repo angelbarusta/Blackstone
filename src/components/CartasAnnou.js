@@ -1,6 +1,6 @@
 import React from "react";
 import faker from "faker";
-import { Card, Image, List } from "semantic-ui-react";
+import { Card, Image, List, Button } from "semantic-ui-react";
 
 import "../pages/styles/Home.css";
 
@@ -33,7 +33,15 @@ const CartasAnnou = () => {
   return (
     <>
       <h4 style={{ padding: "10px 0px 0px 20px" }}>Anuncios</h4>
-      <div className='HOME__ListCardAnnou'>{LIST_CARD}</div>
+      <div className='HOME__ListCardAnnou'>
+        {LIST_CARD}{" "}
+        <Button
+          circular
+          color='green'
+          icon='angle right'
+          style={{ height: 36, margin: "auto" }}
+        />
+      </div>
     </>
   );
 };

@@ -8,32 +8,38 @@ const show1 = {
   ima: faker.internet.avatar(),
   desc: faker.name.jobArea(),
   name: faker.internet.userName(),
+  puesto: faker.name.jobType(),
 };
 const show2 = {
   ima: faker.internet.avatar(),
   desc: faker.name.jobArea(),
   name: faker.internet.userName(),
+  puesto: faker.name.jobType(),
 };
 const show3 = {
   ima: faker.internet.avatar(),
   desc: faker.name.jobArea(),
   name: faker.internet.userName(),
+  puesto: faker.name.jobType(),
 };
 
 const show4 = {
   ima: faker.internet.avatar(),
   desc: faker.name.jobArea(),
   name: faker.internet.userName(),
+  puesto: faker.name.jobType(),
 };
 const show5 = {
   ima: faker.internet.avatar(),
   desc: faker.name.jobArea(),
   name: faker.internet.userName(),
+  puesto: faker.name.jobType(),
 };
 const show6 = {
   ima: faker.internet.avatar(),
   desc: faker.name.jobArea(),
   name: faker.internet.userName(),
+  puesto: faker.name.jobType(),
 };
 
 const lista = [show1, show2, show3];
@@ -58,7 +64,7 @@ var label2 = (
 console.log("lista :", lista);
 
 const Clientes = () => {
-  const LIST_CARD = lista.map(({ ima, desc, name }, i) => (
+  const LIST_CARD = lista.map(({ ima, desc, name, puesto }, i) => (
     <List.Item key={i} className='HOME__Clientes_ListCardItem'>
       <Image
         circular
@@ -69,10 +75,12 @@ const Clientes = () => {
       <div className='HOME__Clientes_ListCardItem_Image_desc'>
         <List.Header>{name}</List.Header>
         {desc}
+        <br />
+        {puesto}
       </div>
     </List.Item>
   ));
-  const LIST_CARD_NUEVA = listaNueva.map(({ ima, desc, name }, i) => (
+  const LIST_CARD_NUEVA = listaNueva.map(({ ima, desc, name, puesto }, i) => (
     <List.Item key={i} className='HOME__Clientes_ListCardItem'>
       <Image
         circular
@@ -83,6 +91,8 @@ const Clientes = () => {
       <div className='HOME__Clientes_ListCardItem_Image_desc'>
         <List.Header>{name}</List.Header>
         {desc}
+        <br />
+        {puesto}
       </div>
     </List.Item>
   ));

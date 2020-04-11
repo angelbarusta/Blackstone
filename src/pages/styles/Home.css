@@ -112,10 +112,40 @@
 }
 
 
-@media screen and (min-width: 768px) {
-  .Home__col {
-    align-items: flex-start;
+@media screen and (max-width: 768px) {
+  .Home_row_uno{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
   }
+  .Home_row_dos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .Home__Landing{
+    width: 100% !important;
+    margin: 10px !important 
+ }
+ .Home__Cart_Selection{
+   width: 100% !important;
+    margin: 10px !important;
+    max-height: 270px; 
+}
+.Home__Clientes{
+  width: 100% !important;
+  margin: 10px !important;
+  padding: 10px !important;
+}
+.Home__Lista{
+  width: 100% !important;
+  margin: 10px !important;
+  padding: 10px !important;
+}
 
 
 }

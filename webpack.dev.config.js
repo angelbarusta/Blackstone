@@ -4,43 +4,43 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, "src/index.js")
+    app: path.resolve(__dirname, "src/index.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "js/[name].js",
     publicPath: "http://localhost:1111/",
-    chunkFilename: "js/[id].[chunkhash].js"
+    chunkFilename: "js/[id].[chunkhash].js",
   },
   devServer: {
     contentBase: path.resolve(__dirname, "dist"),
     open: true,
     hot: true,
     port: 1111,
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         use: "babel-loader",
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.less$/,
-        use: ["style-loader", "css-loader", "less-loader"]
+        use: ["style-loader", "css-loader", "less-loader"],
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.styl$/,
-        use: ["style-loader", "css-loader", "stylus-loader"]
+        use: ["style-loader", "css-loader", "stylus-loader"],
       },
       {
         test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
@@ -48,16 +48,16 @@ module.exports = {
           loader: "file-loader", //url-loader
           options: {
             //limit: 90000,
-            outputPath: "assets/"
-          }
-        }
-      }
-    ]
+            outputPath: "assets/",
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "public/index.html")
-    })
-  ]
+      template: path.resolve(__dirname, "public/index.html"),
+    }),
+  ],
 };

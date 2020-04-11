@@ -80,6 +80,37 @@
     max-height: 270px; 
 }
 
+.Home__Clientes{
+  width: 75% !important;
+  margin: 10px !important;
+  padding: 10px !important;
+}
+.Home__Clientes_Container{
+   width: 100%;
+   height: 280px
+}
+.Home__Clientes_Container_Image{
+  display: block;
+  margin: auto;
+  height: 280px;
+  max-height: 280px;
+}
+.Home__Lista{
+  width: 25% !important;
+  margin: 10px !important;
+  padding: 10px !important;
+}
+.Home__Lista_Container{
+   width: 100%;
+   height: 280px
+}
+.Home__Lista_Container_Image{
+  display: block;
+  margin: auto;
+  height: 280px;
+  width: 100%;
+}
+
 
 @media screen and (min-width: 768px) {
   .Home__col {

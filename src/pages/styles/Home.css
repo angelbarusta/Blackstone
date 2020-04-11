@@ -17,6 +17,24 @@
   align-items: center;
 }
 
+.Home_row_uno{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.HOME__ListCardItem{
+  margin: 20px !important;
+  border: solid 1px gray;
+}
+
+.HOME__ListCardAnnou{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px !important;
+}
+
 @media screen and (min-width: 768px) {
   .Home__col {
     align-items: flex-start;

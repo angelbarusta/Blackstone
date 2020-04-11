@@ -23,12 +23,18 @@ export default class Home extends Component {
           <div className='Home_row_uno'>
             <Card className='Home__Landing'>
               <div className='Home__Landing_Container_Image'>
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start !important",
+                    flexDirection: "column",
+                    color: "white",
+                  }}>
                   <h1>Mensaje del dia</h1>
                   <br />
-                  <p style={{ fontSize: 20 }}>{autor.frace}</p>
-                  <p style={{ fontSize: 10 }}>{autor.name}</p>
-                  <p style={{ fontSize: 10 }}>{autor.date}</p>
+                  <p style={{ fontSize: 25 }}>{autor.frace}</p>
+                  <p style={{ fontSize: 15 }}>{autor.name}</p>
+                  <p style={{ fontSize: 15 }}>{autor.date}</p>
                 </div>
                 {/* <img src={LandingImage} className='Home__Landing_Image' /> */}
               </div>

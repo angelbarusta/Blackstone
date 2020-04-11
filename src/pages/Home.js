@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./styles/Home.css";
 import LogoImage from "../images/az-nuevo_circular.png";
 import CartasAnnou from "../components/CartasAnnou";
+import { Card } from "semantic-ui-react";
 
 export default class Home extends Component {
   render() {
@@ -11,17 +12,31 @@ export default class Home extends Component {
       <div className='Home'>
         <div className='container'>
           <div className='Home_row_uno'>
-            <div className='Home__col '>
-              <img src={LogoImage} alt='Logo' className='img-fluid mb-2' />
-              <h1>Badge Management System</h1>
-              <Link className='btn btn-primary' to='/badges'>
-                Start
-              </Link>
-            </div>
-            <CartasAnnou />
+            <Card style={{ width: "50%", margin: 10, padding: 10 }}>
+              <CartasAnnou />
+            </Card>
+            <Card style={{ width: "50%", margin: 10, padding: 10 }}>
+              <CartasAnnou />
+            </Card>
+          </div>
+
+          <div className='Home_row_dos'>
+            <Card style={{ width: "70%", margin: 10, padding: 10 }}>
+              <CartasAnnou />
+            </Card>
+            <Card style={{ width: "30%", margin: 10, padding: 10 }}>
+              <CartasAnnou />
+            </Card>
           </div>
         </div>
       </div>
     );
   }
+}
+
+{
+  /* <h1>Badge Management System</h1>
+              <Link className='btn btn-primary' to='/badges'>
+                Start
+              </Link> */
 }

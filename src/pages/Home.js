@@ -27,10 +27,25 @@ export default class Home extends Component {
 
           <div className='Home_row_dos'>
             <Card style={{ width: "75%", margin: 10, padding: 10 }}>
-              <CartasAnnou />
+              <div style={{ width: "100%", height: 280 }}>
+                <img
+                  src={LogoImage}
+                  style={{ display: "block", margin: "auto", height: 280 }}
+                />
+              </div>
             </Card>
             <Card style={{ width: "25%", margin: 10, padding: 10 }}>
-              <CartasAnnou />
+              <div style={{ width: "100%", height: 280 }}>
+                <img
+                  src={LogoImage}
+                  style={{
+                    display: "block",
+                    margin: "auto",
+                    height: 280,
+                    width: "100%",
+                  }}
+                />
+              </div>
             </Card>
           </div>
         </div>
